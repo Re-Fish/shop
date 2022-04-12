@@ -176,6 +176,15 @@ body {
         padding: 0 16px 0;
     }
 
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
     ul {
         list-style: none;
 
@@ -186,15 +195,6 @@ body {
         }
     }
 
-    a {
-        text-decoration: none;
-        text-transform: uppercase;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-    }
-
     &-item {
         background-size: cover;
         background-position: center;
@@ -202,18 +202,17 @@ body {
         background-blend-mode: darken;
         margin: 0 0 32px 0;
         height: 248px;
+        width: 100%;
 
         @media (min-width: 768px) {
             margin: 0;
             height: 167px;
             max-width: 232px;
-            width: 100%;
         }
 
         @media (min-width: 1200px) {
             height: 260px;
             max-width: 360px;
-            width: 100%;
         }
 
         &-title {
@@ -228,7 +227,7 @@ body {
 
         &-subtitle {
             color: $pinkColor;
-            font-weight: 900;
+            font-weight: 700;
             font-size: 24px;
             line-height: 29px;
         }
@@ -258,7 +257,6 @@ body {
             @media (min-width: 1200px) {
                 margin: 30px 0 0;
                 height: 180px;
-                max-width: 100%;
             }
         }
     }

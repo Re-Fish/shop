@@ -12,7 +12,7 @@ body {
 
 .page-header {
     height: 74px;
-    background: #222222;
+    background-color: #222222;
     padding: 18px 16px;
     box-sizing: border-box;
 
@@ -289,7 +289,7 @@ body {
         }
     }
 
-    &-heading {
+    &-title {
         text-align: center;
         color: #222222;
         font-weight: 400;
@@ -297,7 +297,7 @@ body {
         line-height: 36px;
     }
 
-    &-text {
+    &-txt {
         text-align: center;
         color: #9F9F9F;
         font-weight: 400;
@@ -327,7 +327,7 @@ body {
             flex-wrap: wrap;
             margin-bottom: 33px;
         }
-        
+
         @media (min-width: 1200px) {
             margin-bottom: 48px;
         }
@@ -343,9 +343,9 @@ body {
 }
 
 .products-item {
-    width: 359px;
+    max-width: 359px;
     position: relative;
-    background: #F8F8F8;
+    background-color: #F8F8F8;
 
     @media (min-width: 768px) {
         width: 360px;
@@ -385,12 +385,13 @@ body {
         display: block;
         width: 100%;
         margin: 0 auto;
+        transition: filter 0.3s ease;
     }
 
     &-title {
-        display: block;
         margin: 0 0 12px 0;
         text-transform: uppercase;
+        font-weight: 400;
         font-size: 13px;
         line-height: 16px;
         color: #000;
@@ -423,7 +424,7 @@ body {
         width: 38.3%;
         min-height: 43px;
         border: 1px solid #fff;
-        background: transparent;
+        background-color: transparent;
         text-align: center;
         font-size: 14px;
         line-height: 17px;
@@ -455,6 +456,7 @@ body {
     padding: 5px;
     margin: 0 auto;
     box-sizing: border-box;
+    transition: color 0.3s ease, background-color 0.3s ease;
 
     &:hover {
         color: #fff;
@@ -465,6 +467,74 @@ body {
         color: #F26376;
         background-color: #fff;
     }
+}
+
+.features {
+    height: 610px;
+    margin: 96px 0 0;
+    background-color: #222224;
+
+    @media (min-width: 768px) {
+        margin: 65px 0 0;
+    }
+
+    @media (min-width: 1200px) {
+        height: 341px;
+        margin: 95px 0 0;
+    }
+
+    .container {
+        padding: 0 14px 0;
+        height: 100%;
+    }
+
+    &-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        color: #FBFBFB;
+        text-align: center;
+        height: 100%;
+
+        @media (min-width: 1200px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    
+        &-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 360px;
+
+            &-icon {
+                display: block;
+                height: 40px;
+                margin: 0 0 20px 0;
+                fill: $pinkColor;
+            }
+
+            &-title {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 24px;
+                margin: 0 0 16px 0;
+            }
+
+            &-txt {
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+    }
+}
+
+.subscribe {
+    height: 550px;
 }
 
 @media (min-width: 1200px) {

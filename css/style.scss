@@ -276,7 +276,7 @@ body {
             display: none;
 
             @media (min-width: 768px) {
-                transition: color ease 0.2s;
+                transition: color ease 0.3s;
                 display: inline-block;
                 font-weight: 600;
                 font-size: 14px;
@@ -285,7 +285,7 @@ body {
         }
 
         &-icon {
-            transition: fill ease 0.2s;
+            transition: fill ease 0.3s;
 
             @media (min-width: 768px) {
                 width: 15px;
@@ -347,6 +347,7 @@ body {
                         border-bottom: 1px solid #EBEBEB;
                         box-sizing: border-box;
                         cursor: pointer;
+                        transition: color ease 0.3s;
 
                         &::before {
                             content: "";
@@ -355,6 +356,10 @@ body {
                             height: 37px;
                             background-color: #EF5B70;
                             margin-right: 11px;
+                        }
+
+                        &:hover {
+                            color: #EF5B70;
                         }
                     }
                 }
@@ -369,7 +374,7 @@ body {
                         margin-bottom: 11px;
                         text-decoration: none;
                         color: inherit;
-                        transition: color ease 0.2s;
+                        transition: color ease 0.3s;
 
                         &:hover {
                             color: $pinkColor;
@@ -400,6 +405,8 @@ body {
         &-filter {
             display: flex;
             align-items: center;
+            position: relative;
+            transition: color 0.3s ease;
 
             &:not(:last-child) {
                 margin-right: 24px;
@@ -415,6 +422,56 @@ body {
                 @media (min-width: 768px) {
                     margin-left: 10px;
                 }
+            }
+
+            &-popup {
+                // display: none;
+                visibility: hidden;
+                transition: visibility 0.3s;
+                position: absolute;
+                box-sizing: border-box;
+                background-color: #fff;
+                box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+                z-index: 1;
+            }
+        }
+
+        .filter-size-popup {
+            width: 79px;
+            left: -10px;
+            top: 21px;
+            padding: 7px 9px 11px;
+
+            &-item {
+                display: block;
+                cursor: pointer;
+                transition: color 0.3s ease;
+
+                &:not(:last-child) {
+                    margin-bottom: 6px;
+                }
+
+                &:hover,
+                input:checked+span {
+                    color: $pinkColor;
+                }
+
+                input {
+                    width: 12px;
+                    height: 12px;
+                    margin-right: 9px;
+                }
+            }
+        }
+
+        .filter-size:hover,
+        .filter-size-popup:hover {
+            color: $pinkColor;
+
+            .filter-size-popup {
+                // display: block;
+                visibility: visible;
+                color: #6F6E6E;
             }
         }
     }

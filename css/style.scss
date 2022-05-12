@@ -579,14 +579,14 @@ body {
 }
 
 .featured {
-    margin: 64px 0 0;
+    margin: 64px 0 96px;
 
     @media (min-width: 768px) {
-        margin-top: 155px;
+        margin: 155px 0 64px;
     }
 
     @media (min-width: 1200px) {
-        margin-top: 96px;
+        margin: 96px 0;
     }
 
     .container {
@@ -629,6 +629,12 @@ body {
 }
 
 .catalog {
+    margin-bottom: 64px;
+
+    @media (min-width: 1200px) {
+        margin-bottom: 96px;
+    }
+
     .container {
         padding: 0;
 
@@ -643,26 +649,57 @@ body {
     }
 }
 
+.other-products {
+    margin: 64px 0 64px;
+
+    @media (min-width: 768px) {
+        margin: 128px 0 128px;
+    }
+
+    .container {
+        padding: 0;
+
+        @media (min-width: 768px) {
+            padding: 0 8px 0;
+        }
+
+        @media (min-width: 1200px) {
+            max-width: 1200px;
+            padding: 0;
+        }
+
+        .products-list-item:last-child {
+            display: none;
+
+            @media (min-width: 1200px) {
+                display: block;
+            }
+        }
+    }
+}
+
 .products-list {
     list-style: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 41px;
 
     @media (min-width: 768px) {
         flex-direction: row;
         flex-wrap: wrap;
-        margin-bottom: 33px;
-    }
-
-    @media (min-width: 1200px) {
-        margin-bottom: 48px;
     }
 
     &-item {
         margin: 8px;
+
+        &:nth-of-type(9) {
+            display: none;
+
+            @media (min-width: 1144px) {
+                display: block;
+            }
+        }
 
         @media (min-width: 1200px) {
             margin: 15px;
@@ -780,18 +817,18 @@ body {
     line-height: 19px;
     width: 100%;
     max-width: 211px;
-    min-height: 47px;
+    min-height: 48px;
     padding: 5px;
     box-sizing: border-box;
     transition: color 0.3s ease, background-color 0.3s ease;
-    margin: 0 auto 96px;
+    margin: 32px auto 0;
 
     @media (min-width: 768px) {
-        margin-bottom: 64px;
+        margin: 24px auto 0;
     }
 
     @media (min-width: 1200px) {
-        margin-bottom: 96px;
+        margin: 33px auto 0;
     }
 
     &:hover {
@@ -807,7 +844,7 @@ body {
 
 .pagination {
     max-width: 284px;
-    height: 43px;
+    height: 44px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -815,10 +852,10 @@ body {
     border: 1px solid #EBEBEB;
     box-sizing: border-box;
     border-radius: 3px;
-    margin: 0 auto 64px;
+    margin: 32px auto 0;
 
     @media (min-width: 1200px) {
-        margin-bottom: 96px;
+        margin: 33px auto 0;
     }
 
     &-item {

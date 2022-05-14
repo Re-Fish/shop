@@ -206,6 +206,14 @@ body {
         }
     }
 
+    .page-cart {
+        margin-top: 26px;
+
+        @media (min-width: 768px) {
+            margin-top: 0;
+        }
+    }
+
     &-path {
         display: flex;
         list-style-type: none;
@@ -1089,6 +1097,21 @@ body {
     &-step {
         border: none;
         background: none;
+    }
+}
+
+.cart {
+    margin-top: 39px;
+    margin-bottom: 48px;
+
+    @media (min-width: 768px) {
+        margin-top: 59px;
+        margin-bottom: 64px;
+    }
+
+    @media (min-width: 1200px) {
+        margin-top: 96px;
+        margin-bottom: 128px;
     }
 }
 

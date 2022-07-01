@@ -1103,15 +1103,69 @@ body {
 .cart {
     margin-top: 39px;
     margin-bottom: 48px;
+    padding: 0 8px;
+    display: flex;
+    // flex-direction: column;
 
     @media (min-width: 768px) {
         margin-top: 59px;
         margin-bottom: 64px;
+        padding: 0 16px;
     }
 
     @media (min-width: 1200px) {
         margin-top: 96px;
         margin-bottom: 128px;
+        padding: 0;
+    }
+
+    &-left {
+        &-cards {
+            .card {
+                display: flex;
+                width: 358px;
+                height: 188px;
+                filter: drop-shadow(8px 8px 21px rgba(0, 0, 0, 0.13));
+
+                &:not(:last-of-type) {
+                    margin-bottom: 32px;
+                }
+
+                &-img {
+                    width: 144px;
+                    height: 100%;
+                    overflow: hidden;
+
+                    img {
+                        max-width: 100%;
+                        min-height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .card-content {
+                    background-color: #fff;
+                    flex-grow: 1;
+                    padding: 14px 17px;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #575757;
+
+                    &-title {
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: #222222;
+                        margin-bottom: 26px;
+                    }
+
+                    span {
+                        color: #EF5B70;
+                    }
+                }
+            }
+        }
     }
 }
 
